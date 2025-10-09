@@ -1,0 +1,11 @@
+*{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    text-align: right;
+    background-color: color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%);
+}
+
+button{
+    background-color: color-mix(in srgb, green 60%, red 40%);
+}

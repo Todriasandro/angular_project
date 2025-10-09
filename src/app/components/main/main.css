@@ -1,0 +1,95 @@
+
+
+ul{
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%);
+    
+}
+li{
+    background-color:color-mix(in srgb, black 90%, white 10%) ;
+    color: color-mix(in srgb, green 60%, red 40%) ;
+    border-radius: 15%;
+    padding: 10px 15px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+section{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.active{
+    color: green;
+    background-color:color-mix(in srgb, green 60%, red 40%) ;
+    
+}
+
+li:hover{
+    background-color: color-mix(in srgb, green 60%, red 40%);
+    transition: 0.3s;
+    color: green;
+}
+
+.res-container{
+    display: flex;
+   background-color: color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%)
+}
+
+.filterArea{
+    
+    color: color-mix(in srgb, green 60%, red 40%) ;
+    max-width: 160px;
+   background-color: color-mix(in srgb, black 90%, white 10%);
+   
+max-height: 300px;
+    padding: 20px;
+    
+}
+.filterArea button:hover{
+    background-color: green;
+    color:color-mix(in srgb, green 60%, red 40%) ;
+    transition: 0.3s;
+}
+button{
+    border: none;
+    background-color:color-mix(in srgb, green 60%, red 40%)  ;
+}
+
+.card{
+    background-color: color-mix(in srgb, black 90%, white 10%);
+    color: color-mix(in srgb, green 60%, red 40%) ;
+}
+
+@media(max-width:600px){
+.res-container{
+flex-direction: column;
+}
+.filterdiv{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    max-width: 100%;
+}
+.filterArea{
+    max-width: 100%;
+    gap: 20px;
+    display: flex;
+    font-size: 20px;
+}
+}
+
+@media(min-width:200px){
+    .filterArea{
+        flex-direction: column;
+    }
+}

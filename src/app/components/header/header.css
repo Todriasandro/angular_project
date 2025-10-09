@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+header{
+    background-color: color-mix(in srgb, black 90%, white 10%);
+    height: 20vh;
+   
+}
+header a{
+     color: color-mix(in srgb, green 60%, red 40%);
+     
+}
+
+header a:hover{
+color: green;
+transition: 0.3s;
+}
+
+.header-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+ul{
+    display: flex;
+    gap: 15px;
+}
+
+/* Burger ღილაკი */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background:color-mix(in srgb, green 60%, red 40%);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive - მობილური ხედისთვის */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+
+
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background:rgba(0, 0, 0, 0.701);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  nav.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(40deg) translate(7px, 4px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-40deg) translate(7px, -4px);
+}

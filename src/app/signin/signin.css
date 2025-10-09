@@ -1,0 +1,40 @@
+*{
+   margin: 0;
+
+}
+
+
+.container{
+ height: 50vh;
+ align-content: center;
+ display: flex;
+ gap: 20px;
+ 
+   
+}
+
+button{
+    border:none;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+button{
+    background-color: color-mix(in srgb, green 60%, red 40%);
+}
+
+input {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}

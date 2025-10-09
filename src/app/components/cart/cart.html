@@ -1,0 +1,30 @@
+
+<section>
+  <div class="container">
+  @for (item of cartList; track $index) {
+  <div class="card" style="width: 18rem">
+    <img [src]="item.product.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">spiciness: {{ item.product.spiciness }}</h5>
+      <h4>{{ item.product.price }} $</h4>
+      <p>Total price: {{item.product.price*item.quantity}}$</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ item.product.name }}</h5>
+      <h6>nuts:{{ item.product.nuts ? '✅' : '❌' }}</h6>
+      <h6>vegetarian:{{ item.product.vegeterian ? '✅' : '❌' }}</h6>
+      <button (click)="removeItem(item.product.id)">Remove</button>
+    </div>
+    <div class="card-controls">
+        <input type="number" [(ngModel)]="item.quantity" min="1" (input)="updateBasket(item)">
+    </div>
+  </div>
+
+  }
+    <div *ngIf="cartList.length>0">
+    <h3>Total Price: {{calculateTotalPrice()}}</h3>
+</div>
+  </div>
+
+</section>
+

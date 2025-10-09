@@ -1,0 +1,20 @@
+.container{
+    padding: 20px;
+}
+section{
+
+         background-color:  color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%);;
+         max-height: 1200vh;
+   
+   
+    
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    padding: 15px;
+   background-color: color-mix(in srgb, black 90%, white 10%);
+    color: color-mix(in srgb, green 60%, red 40%) ;
+}

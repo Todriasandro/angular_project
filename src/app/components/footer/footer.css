@@ -1,0 +1,46 @@
+*{
+    text-decoration: none;
+}
+
+.box{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 20px;
+    
+}
+.follow{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color: color-mix(in srgb, black 90%, white 10%);
+}
+.fa-instagram {
+ 
+  color: rgb(211, 5, 98);
+}
+.fa-pinterest{
+    color: brown;
+}
+.fa-youtube{
+    color: red;
+}
+.authorization{
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.aboutus a{
+    color: white;
+}
+
+.conditions a{
+    color: white;
+}
+
+.contact a{
+    color: white;
+}

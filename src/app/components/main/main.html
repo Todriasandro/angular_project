@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=BBH+Sans+Hegarty&family=DM+Serif+Text:ital@0;1&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Hedvig+Letters+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+<ul>
+    <li [class.active]="activeCategory==0" (click)="allCards()">All</li>
+    @for (item of categories; track $index) {
+        <li (click)="filterByCategory(item.id)" [class.active]="item.id==activeCategory">
+            {{item.name}}
+        </li>
+    }
+</ul>
+<div class="res-container">
+  <div class="filterdiv">
+    <div class="filterArea">
+    <h3>Filter products</h3>
+    <div class="spic">
+        <label for=""> Spiciness: {{spiciness==="-1"? "not-chosen":spiciness}}</label>
+        <input type="range" min="-" max="4" [(ngModel)]="spiciness" (ngModelChange)="fillterFoods()">
+    </div>
+    <div class="checks">
+        <input type="checkbox" [(ngModel)]="nuts"(ngModelChange)="fillterFoods()">
+        <label >Nuts</label>
+    </div>
+      <div class="checks">
+        <input type="checkbox" [(ngModel)]="vegetarian"(ngModelChange)="fillterFoods()">
+        <label >Vegeterian</label>
+    </div>
+  
+    <button (click)="reset()">Reset</button>
+</div>
+</div>
+<section>
+  @for (item of allProducts; track $index) {
+  <div class="card" style="width: 18rem">
+    <img [src]="item.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">spiciness: {{ item.spiciness }}</h5>
+      <h4>{{ item.price }} $</h4>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <h6>nuts:{{ item.nuts ? '✅' : '❌' }}</h6>
+      <h6>vegetarian:{{ item.vegeterian ? '✅' : '❌' }}</h6>
+      <button (click)="addToCart(item)">Add to cart</button>
+
+    </div>
+  </div>
+
+  }
+</section>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
