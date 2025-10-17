@@ -4,23 +4,20 @@
       <h1>Step Restaurant</h1>
     </a>
 
-    <!-- 🟢 ახალი burger ღილაკი -->
+  
     <div class="burger" [class.active]="menuOpen" (click)="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- 🟢 მენიუ -->
     <nav [class.open]="menuOpen">
       <ul>
         <li><a routerLink="/">Home</a></li>
         <li><a routerLink="/cart">Cart</a></li>
         <li><a routerLink="/auth">Registration</a></li>
         <li><a routerLink="/login">Log in</a></li>
-        <!-- <li>
-          <button *ngIf="tools.isLoggedIn()" (click)="tools.signout()">გასვლა</button>
-        </li> -->
+        
       </ul>
     </nav>
   </div>

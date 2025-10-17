@@ -1,6 +1,13 @@
 
 <section>
+     <div *ngIf="cartList.length === 0" class="empty-cart-center">
+  
+  <h2>  Your cart is empty!</h2>
+  <p>  Add items to your cart to start shopping.</p>
+</div>
   <div class="container">
+ 
+    <div class="box">
   @for (item of cartList; track $index) {
   <div class="card" style="width: 18rem">
     <img [src]="item.product.image" class="card-img-top" alt="..." />
@@ -21,10 +28,15 @@
   </div>
 
   }
+    </div>
     <div *ngIf="cartList.length>0">
     <h3>Total Price: {{calculateTotalPrice()}}</h3>
+    </div>
+    
+
+
 </div>
-  </div>
+  
 
 </section>
 

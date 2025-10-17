@@ -8,10 +8,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.css'
 })
 export class Header {
-menuOpen = false;
+  menuOpen = false;
 
-toggleMenu() {
-  this.menuOpen = !this.menuOpen;
-}
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
 }

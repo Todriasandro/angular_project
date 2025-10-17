@@ -1,17 +1,22 @@
 *{
     text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-height: fit-content;
 }
 
 .box{
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 60px;
     font-size: 20px;
     
 }
 .follow{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 body{
@@ -43,4 +48,15 @@ body{
 
 .contact a{
     color: white;
+}
+
+
+@media(max-width:1200px){
+    .box{
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        
+       
+    }
 }

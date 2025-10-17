@@ -32,7 +32,7 @@ ul{
     gap: 15px;
 }
 
-/* Burger ღილაკი */
+
 .burger {
   display: none;
   flex-direction: column;
@@ -46,9 +46,10 @@ ul{
   background:color-mix(in srgb, green 60%, red 40%);
   border-radius: 2px;
   transition: all 0.3s ease;
+  
 }
 
-/* Responsive - მობილური ხედისთვის */
+
 @media (max-width: 768px) {
   .burger {
     display: flex;
@@ -82,11 +83,13 @@ ul{
 }
 
 .burger.active span:nth-child(1) {
-  transform: rotate(40deg) translate(7px, 4px);
+  transform: rotate(40deg) translate(8px, 4px);
+  
 }
 
 .burger.active span:nth-child(2) {
   opacity: 0;
+  
 }
 
 .burger.active span:nth-child(3) {

@@ -1,20 +1,80 @@
-.container{
+*{
+    padding: 0 auto;
+    margin: 0 ;
+    box-sizing: border-box;
+
+}
+
+
+.box{
     padding: 20px;
+display: flex;
+flex-wrap: wrap;
+    gap: 10px;
+    padding: 90px 0px;
+
 }
 section{
 
          background-color:  color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%);;
          max-height: 1200vh;
-   
-   
-    
-    display: flex;
-    flex-wrap: wrap;
-
+  
 }
 
 .card{
+    
     padding: 15px;
    background-color: color-mix(in srgb, black 90%, white 10%);
     color: color-mix(in srgb, green 60%, red 40%) ;
+    
+}
+
+.card button{
+  border:none;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, green 60%, red 40%);
+  color:color-mix(in srgb, black 90%, white 10%);
+}
+.card button:hover{
+  transition: 0.3s;
+  background-color:  color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%);
+}
+@media(max-width:1200px){
+    section{
+        padding: 0;
+    }
+    .container{
+        padding: 0;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.empty-cart-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; 
+  text-align: center;
+  color: black;
+}
+
+.empty-cart-center .icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.empty-cart-center h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.empty-cart-center p {
+  font-size: 16px;
+  color:black;
 }

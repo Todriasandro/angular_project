@@ -42,3 +42,28 @@ input {
 button{
     background-color: color-mix(in srgb, green 60%, red 40%) ;
 }
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+.field{
+    background-color: color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%) ;
+    
+}
+

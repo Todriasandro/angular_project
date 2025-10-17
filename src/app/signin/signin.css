@@ -9,6 +9,7 @@
  align-content: center;
  display: flex;
  gap: 20px;
+ text-align: left;
  
    
 }
@@ -37,4 +38,25 @@ input {
   outline: none;
   font-size: 16px;
   transition: border-color 0.3s ease;
+}
+
+.password-field {
+  position: relative;
+ 
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px; 
+  height: 36px;
+  font-size: 16px;
+}
+
+.password-field .toggle-btn {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }

@@ -1,4 +1,8 @@
+*{
 
+  
+    box-sizing: border-box;
+}
 
 ul{
     max-width: 100%;
@@ -28,6 +32,10 @@ section{
     justify-content: center;
     padding: 20px;
 }
+
+.filterdiv{
+    padding: 20px;
+}
 .active{
     color: green;
     background-color:color-mix(in srgb, green 60%, red 40%) ;
@@ -38,11 +46,13 @@ li:hover{
     background-color: color-mix(in srgb, green 60%, red 40%);
     transition: 0.3s;
     color: green;
+    
 }
 
 .res-container{
     display: flex;
-   background-color: color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%)
+   background-color: color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%);
+   padding: 20px;
 }
 
 .filterArea{
@@ -56,23 +66,33 @@ max-height: 300px;
     
 }
 .filterArea button:hover{
-    background-color: green;
-    color:color-mix(in srgb, green 60%, red 40%) ;
+    background-color: color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%);
+    color: color-mix(in srgb, green 60%, red 40%) ;
     transition: 0.3s;
 }
 button{
     border: none;
     background-color:color-mix(in srgb, green 60%, red 40%)  ;
+    border-radius: 5px;
 }
 
+button:hover{
+  background-color: color-mix(in srgb, green 75%, rgb(24, 3, 252) 25%);
+  color:color-mix(in srgb, green 60%, red 40%) ;
+  transition: 0.3s;
+}
 .card{
     background-color: color-mix(in srgb, black 90%, white 10%);
     color: color-mix(in srgb, green 60%, red 40%) ;
 }
 
+
+
+
 @media(max-width:600px){
 .res-container{
 flex-direction: column;
+padding: 0;
 }
 .filterdiv{
     justify-content: center;
@@ -92,4 +112,81 @@ flex-direction: column;
     .filterArea{
         flex-direction: column;
     }
+    section{
+        padding: 0;
+    }
+}
+
+
+.mat-simple-snackbar {
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+  opacity: 1 !important; 
+  padding: 14px 24px;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+
+.snack-success {
+  background-color: #4caf50 !important; 
+  color: white !important;
+  font-weight: 500;
+}
+
+
+.snack-error {
+  background-color: #f44336 !important;
+  color: white !important;
+  font-weight: 500;
+}
+
+
+body.dark-mode .snack-success {
+  background-color: #81c784 !important;
+  color: black !important;
+}
+
+body.dark-mode .snack-error {
+  background-color: #e57373 !important;
+  color: black !important;
+}
+
+
+.mat-snack-bar-container {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mat-snack-bar-container.mat-snack-bar-opened {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animated-text {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #3f51b5, #4caf50);
+  
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { letter-spacing: -2px; opacity: 0; }
+  100% { letter-spacing: 1px; opacity: 1; }
 }
